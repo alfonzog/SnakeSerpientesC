@@ -1,5 +1,6 @@
-﻿/*
- * Juego de serpientes in C
+/*
+ * Juego de serpientes en C
+ * Modificado por alfonzog José Armando Alfonzo García
  */
 
 #include <conio.h>
@@ -61,22 +62,25 @@ void draw()
 
 void input()
 {
+    int tecla = ' ';
     if (_kbhit())
     {
-        switch (getch())
+        tecla = _getch();
+        switch (tecla)
         {
-        case 's':
+        case 80:
             flag = 1;
             break;
-        case 'a':
+        case 75:
             flag = 2;
             break;
-        case 'w':
+        case 72:
             flag = 3;
             break;
-        case 'd':
+        case 77:
             flag = 4;
             break;
+        case 'X':
         case 'x':
             gameover = 1;
             break;
